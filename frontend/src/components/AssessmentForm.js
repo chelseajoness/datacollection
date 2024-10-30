@@ -19,7 +19,8 @@ const AssessmentForm = () => {
     courseType: '',
     course: '',
     sectionNumbers: '',
-    numberOfMajors: '',
+    cscMajors: '',
+    itcMajors: '',
     majorsMeetingTarget: '',
     comments: '',
     rubricFile: null
@@ -144,22 +145,46 @@ const AssessmentForm = () => {
             }}
           />
 
-          <TextField
-            name="numberOfMajors"
-            label="Number of Majors"
-            type="number"
-            value={formData.numberOfMajors}
-            onChange={handleChange}
-            fullWidth
-            required
-            sx={{ 
-              '& .MuiOutlinedInput-root': {
-                '& fieldset': { borderColor: 'grey' },
-                '&:hover fieldset': { borderColor: 'white' },
-              },
-              '& .MuiInputLabel-root': { color: 'grey' }
-            }}
-          />
+          {/* Split Number of Majors into CSC and ITC */}
+          <Box sx={{ 
+            gridColumn: '2', 
+            display: 'grid', 
+            gridTemplateColumns: '1fr 1fr', 
+            gap: 2 
+          }}>
+            <TextField
+              name="cscMajors"
+              label="CSC Majors"
+              type="number"
+              value={formData.cscMajors}
+              onChange={handleChange}
+              fullWidth
+              required
+              sx={{ 
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': { borderColor: 'grey' },
+                  '&:hover fieldset': { borderColor: 'white' },
+                },
+                '& .MuiInputLabel-root': { color: 'grey' }
+              }}
+            />
+            <TextField
+              name="itcMajors"
+              label="ITC Majors"
+              type="number"
+              value={formData.itcMajors}
+              onChange={handleChange}
+              fullWidth
+              required
+              sx={{ 
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': { borderColor: 'grey' },
+                  '&:hover fieldset': { borderColor: 'white' },
+                },
+                '& .MuiInputLabel-root': { color: 'grey' }
+              }}
+            />
+          </Box>
 
           {/* Fourth row - spans full width */}
           <TextField
