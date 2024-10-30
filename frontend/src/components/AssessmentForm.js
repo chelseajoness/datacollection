@@ -49,7 +49,7 @@ const AssessmentForm = () => {
 
   return (
     <Container maxWidth="md" sx={{ mt: 4 }}>
-      <Typography variant="h4" align="center" sx={{ mb: 4, color: '#9c27b0' }}>
+      <Typography variant="h4" align="center" sx={{ mb: 4, color: '#FFD700' }}>
         Course Assessment Data Collection
       </Typography>
       
@@ -241,9 +241,9 @@ const AssessmentForm = () => {
             sx={{ 
               gridColumn: '1 / -1',
               mt: 2,
-              backgroundColor: '#9c27b0',
+              backgroundColor: '#FFD700',
               '&:hover': {
-                backgroundColor: '#7b1fa2'
+                backgroundColor: '#FFD700'
               }
             }}
           >
