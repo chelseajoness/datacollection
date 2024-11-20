@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Config
+clusters:
+- cluster:
+    certificate-authority-data: DATA+OMITTED
+    server: https://127.0.0.1:6443
+  name: docker-desktop
+contexts:
+- context:
+    cluster: docker-desktop
+    user: aysu.dalogullari@usm.edu
+    namespace: default
+  name: docker-desktop
+current-context: docker-desktop
+preferences: {}
+users:
+- name: aysu.dalogullari@usm.edu
+  user:
+    client-certificate: $HOME/.kube/certs/aysu-dalogullari.crt
+    client-key: $HOME/.kube/certs/aysu-dalogullari.key
